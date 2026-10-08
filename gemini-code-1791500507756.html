@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawaii Express Family Itinerary (Kauai & Oahu)</title>
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --accent: #f59e0b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0284c7, #0d9488);
+            color: white;
+            padding: 28px 24px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            opacity: 0.92;
+        }
+
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.825rem;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text);
+            margin: 32px 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #334155;
+            font-weight: 600;
+            padding: 12px 16px;
+            border-bottom: 2px solid var(--border);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .tag-flight { background: #e0f2fe; color: #0369a1; }
+        .tag-stay { background: #fef3c7; color: #b45309; }
+        .tag-hike { background: #dcfce7; color: #15803d; }
+        .tag-food { background: #ffe4e6; color: #be123c; }
+
+        .note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 12px; }
+            header { padding: 20px 16px; }
+            th, td { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Hawaii Family Express Travel Plan</h1>
+        <p>Oct 13 – Oct 17 | Multi-Island Master Itinerary & Daily Operations</p>
+        <div class="pills">
+            <span class="pill">👨‍👩‍👧 4 Adults + 1 Infant (10 mo)</span>
+            <span class="pill">🚗 SUV Rental + Doona Car Seat</span>
+            <span class="pill">♿ Senior & Stroller Accessible</span>
+        </div>
+    </header>
+
+    <div class="section-title">✈️ Master Travel & Logistical Schedule</div>
+    <div class="card">
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Segment / Event</th>
+                        <th>Start / Dep</th>
+                        <th>Arrival / End</th>
+                        <th>Logistics & Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Tue, Oct 13</b></td>
+                        <td><span class="tag tag-flight">Drive</span> Home Dep</td>
+                        <td>6:30 AM</td>
+                        <td>8:00 AM</td>
+                        <td>Sunnyvale (94089) → OAK Airport. Buffer for traffic.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tue, Oct 13</b></td>
+                        <td><span class="tag tag-flight">Flight</span> Outbound</td>
+                        <td>10:35 AM</td>
+                        <td>1:15 PM</td>
+                        <td>Flight OAK → Lihue (LIH)[cite: 1]. Pickup rental SUV, install Doona[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tue, Oct 13</b></td>
+                        <td><span class="tag tag-stay">Airbnb</span> Kauai Check-In</td>
+                        <td>12:00 PM / 2:00 PM</td>
+                        <td>—</td>
+                        <td>Check in / drop luggage at <b>3411 Wilcox Road, Lihue, HI 96766</b>.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Wed, Oct 14</b></td>
+                        <td><span class="tag tag-stay">Airbnb</span> Kauai Check-Out</td>
+                        <td>10:00 AM</td>
+                        <td>—</td>
+                        <td>Check out Kauai Airbnb (3411 Wilcox Rd); pack trunk for day activities.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Wed, Oct 14</b></td>
+                        <td><span class="tag tag-flight">Flight</span> Inter-Island</td>
+                        <td>7:05 PM</td>
+                        <td>7:45 PM</td>
+                        <td>Southwest #2590 (LIH → HNL)[cite: 1]. Return car by 5:15 PM[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Wed, Oct 14</b></td>
+                        <td><span class="tag tag-stay">Airbnb</span> Oahu Check-In</td>
+                        <td>8:30 PM</td>
+                        <td>8:45 PM</td>
+                        <td>Pickup HNL rental car → 201 ʻŌhua Ave (Waikiki Banyan, T1-801)[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Fri, Oct 16</b></td>
+                        <td><span class="tag tag-stay">Airbnb</span> Check-Out</td>
+                        <td>10:00 AM / Late</td>
+                        <td>—</td>
+                        <td>Pack rental trunk. (Store bags on 6th-floor rec deck if standard check-out).</td>
+                    </tr>
+                    <tr>
+                        <td><b>Fri, Oct 16</b></td>
+                        <td><span class="tag tag-flight">Flight</span> Red-Eye Return</td>
+                        <td>11:59 PM</td>
+                        <td>8:09 AM <small>(Sat)</small></td>
+                        <td>Alaska #0834 (HNL → SFO)[cite: 1]. Gate-check Doona at jetbridge.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section-title">📅 Detailed Daily Itinerary</div>
+    <div class="card">
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Activity / Event</th>
+                        <th>Location</th>
+                        <th>Mobility & Equipment Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Tue, Oct 13</b><br><small>6:30 AM – 1:15 PM</small></td>
+                        <td>Flight OAK → LIH & Arrival</td>
+                        <td>Oakland / Kauai</td>
+                        <td>Drive to OAK, fly to LIH[cite: 1], pick up rental car, install car seat[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tue, Oct 13</b><br><small>1:30 PM – 2:00 PM</small></td>
+                        <td>Kauai Airbnb Check-In</td>
+                        <td>3411 Wilcox Rd, Lihue</td>
+                        <td>5-min drive from airport[cite: 1]. Drop off luggage and rest before heading out.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Tue, Oct 13</b><br><small>2:30 PM – 5:00 PM</small></td>
+                        <td><span class="tag tag-hike">Hike</span> Poipu Coast Walk</td>
+                        <td>Poipu, Kauai</td>
+                        <td><b>Baby Carrier</b> for Mahaulepu dirt path[cite: 1]; <b>Doona Stroller</b> for paved Poipu Baby Beach path[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Wed, Oct 14</b><br><small>10:30 AM – 12:00 PM</small></td>
+                        <td>Sacred Rudraksha Forest</td>
+                        <td>Kapaʻa, Kauai</td>
+                        <td>Short, flat, shaded grove path[cite: 1]. Senior & <b>Doona Stroller / Carrier</b> friendly[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Wed, Oct 14</b><br><small>12:30 PM – 4:30 PM</small></td>
+                        <td>Lunch & Lydgate Beach</td>
+                        <td>Kapaa / Lydgate</td>
+                        <td>Paved stroller paths & enclosed ocean pools for baby.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Wed, Oct 14</b><br><small>7:05 PM – 8:30 PM</small></td>
+                        <td>Flight to Oahu & Check-In</td>
+                        <td>LIH → HNL → Airbnb</td>
+                        <td>Fly Southwest #2590[cite: 1]; check into Waikiki Banyan T1-801 with free parking[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Thu, Oct 15</b><br><small>Morning</small></td>
+                        <td><span class="tag tag-hike">Drive</span> Scenic Highway 72</td>
+                        <td>East Oahu</td>
+                        <td>Flat lookouts (Makapuʻu & Halona Blowhole)[cite: 1]. Zero hiking required for seniors.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Thu, Oct 15</b><br><small>Afternoon</small></td>
+                        <td>Kūhiō Beach Ponds</td>
+                        <td>Waikiki</td>
+                        <td>3-min flat walk from Airbnb[cite: 1]; wave-free ocean splash pool for baby[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Thu, Oct 15</b><br><small>4:30 PM – 6:15 PM</small></td>
+                        <td>Sunset Catamaran Cruise</td>
+                        <td>Waikiki Beach</td>
+                        <td>Covered seating. Short 15-min walk or 5-min drive from Airbnb.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Thu, Oct 15</b><br><small>7:30 PM – 9:00 PM</small></td>
+                        <td>Rock-A-Hula Show</td>
+                        <td>Royal Hawaiian Center</td>
+                        <td>10–12 min flat stroller walk down Kalākaua Ave[cite: 1]. Confirmed reservation[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Fri, Oct 16</b><br><small>8:00 AM – 11:30 AM</small></td>
+                        <td>Pearl Harbor National Memorial</td>
+                        <td>Pearl Harbor</td>
+                        <td>100% flat, paved, accessible for seniors & Doona[cite: 1]. USS Arizona shuttle boat[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Fri, Oct 16</b><br><small>12:00 PM – 1:30 PM</small></td>
+                        <td><span class="tag tag-food">Lunch</span> Indian Cuisine</td>
+                        <td>New Kamana Kitchen / Himalayan Kitchen</td>
+                        <td><b>New Kamana Kitchen</b> (Bishop St/Downtown) or <b>Himalayan Kitchen</b> (11th Ave patio). Accessible dining with classic curries & naan.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Fri, Oct 16</b><br><small>2:00 PM – 4:30 PM</small></td>
+                        <td><span class="tag tag-hike">Hike</span> Mānoa Falls / Zoo</td>
+                        <td>Mānoa or Waikiki</td>
+                        <td><i>Option A:</i> Mānoa Falls (1.7 mi, carrier needed)[cite: 1].<br><i>Option B:</i> Shaded Honolulu Zoo walk[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><b>Fri, Oct 16</b><br><small>5:00 PM – 11:59 PM</small></td>
+                        <td>Dinner, Airport & Red-Eye Flight</td>
+                        <td>Waikiki → HNL → SFO</td>
+                        <td>Pack trunk, casual dinner, drive to HNL by 9:15 PM[cite: 1]. Fly Alaska #0834 at 11:59 PM[cite: 1].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
